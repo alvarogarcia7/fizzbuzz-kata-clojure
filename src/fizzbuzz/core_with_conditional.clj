@@ -5,13 +5,11 @@
   (= (rem i divisor) 0))
 
 (defn- conditional [i]
-  (if (divisible-by? i 15)
-    "fizzbuzz"
-    (if (divisible-by? i 3)
-      "fizz"
-      (if (divisible-by? i 5)
-      "buzz"
-      (str i)))))
+  (cond
+   (divisible-by? i 15) "fizzbuzz"
+   (divisible-by? i 3) "fizz"
+   (divisible-by? i 5) "buzz"
+   :else (str i)))
 
 (defn fizzbuzz[n]
   (let [numbers (range 1 (inc n))]
