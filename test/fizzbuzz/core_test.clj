@@ -13,3 +13,8 @@
   (to-num 1) => "1"
   (to-num 2) => "2"
   (to-num 3) => "3")
+
+
+(def numbers (range 1 (inc 8)))
+numbers
+(map to-num numbers)
