@@ -10,7 +10,7 @@
     i))
 
 (defn- buzz? [i]
-  (if (or (string? i) (not (= (rem i 5) 0)))
+  (if (or (string? i) (not (divisible-by? i 5)))
     i
     "buzz"))
 
