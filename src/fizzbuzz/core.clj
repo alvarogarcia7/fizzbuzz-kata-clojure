@@ -1,6 +1,9 @@
 (ns fizzbuzz.core
   (:gen-class))
 
+(defn to-num[i]
+  (str i))
+
 (defn fizzbuzz[n]
   (cond
     (= n 1) '("1")
