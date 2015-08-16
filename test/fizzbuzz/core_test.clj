@@ -8,6 +8,7 @@
   (fizzbuzz 2) => '("1" "2")
   (fizzbuzz 3) => '("1" "2" "fizz")
   (fizzbuzz 5) => '("1" "2" "fizz" "4" "buzz")
+  (fizzbuzz 15) => '("1" "2" "fizz" "4" "buzz" "fizz" "7" "8" "fizz" "buzz" "11" "fizz" "13" "14" "fizzbuzz")
     )
 
 (fact "about number to string converter"
