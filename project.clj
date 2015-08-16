@@ -8,6 +8,7 @@
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}
 	     :dev {
-                     :dependencies [[midje "1.6.3"]]
+                     :dependencies [[midje "1.6.3"]
+                                    [org.clojure/core.match "0.3.0-alpha4"]]
                      :plugins      [[lein-midje "3.1.3"]]
                }})
