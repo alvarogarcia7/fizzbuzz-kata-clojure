@@ -15,5 +15,6 @@
 
 
 (defn fizzbuzz[n]
-  (let [numbers (range 1 (inc n))]
-    (map apply-first-on-second (zip fizz-buzz-schedule numbers))))
+  (let [numbers (range 1 (inc n))
+        function-and-number (zip fizz-buzz-schedule numbers)]
+    (map apply-first-on-second function-and-number)))
