@@ -26,6 +26,12 @@ functions
 
 ; convert to a pair of <fn, value>
 ; http://stackoverflow.com/questions/2588227/is-there-an-equivalent-for-the-zip-function-in-clojure-core-or-contrib
+(def fn-num
+  (map vector functions numbers2))
+fn-num
+(defn apply-1-on-2 [v]
+  ((first v) (second v)))
+(map apply-1-on-2 fn-num)
 
 ; (cons (eval identity) '())
 
