@@ -3,10 +3,11 @@
   (:require [clojure.string :as str])
   (:require [fizzbuzz.core-with-fixed-schedule :as fs])
   (:require [fizzbuzz.core-with-conditional :as c])
+  (:require [fizzbuzz.core-with-pattern-matching :as cpm])
   (:require [fizzbuzz.core-with-function-composition :as fc]))
 
 (def fzzbzz
-  c/fizzbuzz)
+  cpm/fizzbuzz)
 
 (fact "about fizzbuzz"
   (fzzbzz 1) => '("1")
