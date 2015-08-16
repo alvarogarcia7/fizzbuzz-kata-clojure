@@ -21,10 +21,7 @@ numbers2
 (map to-num numbers2)
 
 (def functions
-  (flatten (repeat (cons
-                    identity (cons
-                              identity (cons
-                              (fn [n] "fizz") '()))))))
+  (flatten (repeat [identity identity (fn [n] "fizz")])))
 functions
 
 ; http://stackoverflow.com/questions/2588227/is-there-an-equivalent-for-the-zip-function-in-clojure-core-or-contrib
@@ -37,4 +34,11 @@ fn-num
 ((first (first fn-num)) (second (first fn-num)))
 
 ; (cons (eval identity) '())
+
+; how to create a list of functions in clojure:
+; http://stackoverflow.com/questions/3311331/apply-first-of-a-list-of-functions-in-clojure
+[identity inc]
+; is an array (see [])
+; to convert it to a list:
+(flatten [identity inc])
 
