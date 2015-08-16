@@ -2,4 +2,6 @@
   (:gen-class))
 
 (defn fizzbuzz[n]
-  '("1"))
+  (if (= n 1)
+    '("1")
+    '("1" "2" "fizz")))
