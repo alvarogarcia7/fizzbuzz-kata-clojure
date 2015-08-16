@@ -9,11 +9,11 @@
 (defn- fizzbuzz- [n] "fizzbuzz")
 
 (def ^:private fizz-buzz-schedule
-  (flatten (repeat [to-num to-num fizz
-                    to-num buzz fizz
-                    to-num to-num fizz
-                    buzz to-num fizz
-                    to-num to-num fizzbuzz-])))
+  (flatten (repeat [to-num  to-num  fizz
+                    to-num  buzz    fizz
+                    to-num  to-num  fizz
+                    buzz    to-num  fizz
+                    to-num  to-num  fizzbuzz-])))
 
 (defn- zip [functions numbers]
   (map vector functions numbers))
