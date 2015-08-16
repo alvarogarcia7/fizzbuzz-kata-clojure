@@ -5,6 +5,7 @@
 
 (fact "about fizzbuzz"
   (fizzbuzz 1) => '("1")
+  (fizzbuzz 2) => '("1" "2")
   (fizzbuzz 3) => '("1" "2" "fizz")
   (fizzbuzz 5) => '("1" "2" "fizz" "4" "buzz")
     )
