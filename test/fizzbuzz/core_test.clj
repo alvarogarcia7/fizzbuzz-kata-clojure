@@ -16,6 +16,25 @@
   (to-num 3) => "3")
 
 
-(def numbers (range 1 (inc 8)))
-numbers
-(map to-num numbers)
+(def numbers2 (range 1 (inc 8)))
+numbers2
+(map to-num numbers2)
+
+(def functions
+  (flatten (repeat (cons
+                    identity (cons
+                              identity (cons
+                              (fn [n] "fizz") '()))))))
+functions
+
+; http://stackoverflow.com/questions/2588227/is-there-an-equivalent-for-the-zip-function-in-clojure-core-or-contrib
+(def fn-num
+  (map vector functions numbers2))
+fn-num
+(defn apply-first-on-second [v]
+  ((first v) (second v)))
+(map apply-first-on-second fn-num)
+((first (first fn-num)) (second (first fn-num)))
+
+; (cons (eval identity) '())
+
