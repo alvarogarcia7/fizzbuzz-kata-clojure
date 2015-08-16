@@ -1,10 +1,11 @@
 (ns fizzbuzz.core-test
   (:use midje.sweet)
   (:require [clojure.string :as str])
-  (:require [fizzbuzz.core-with-fixed-schedule :as fs]))
+  (:require [fizzbuzz.core-with-fixed-schedule :as fs])
+  (:require [fizzbuzz.core-with-function-composition :as fc]))
 
 (def fzzbzz
-  fs/fizzbuzz)
+  fc/fizzbuzz)
 
 (fact "about fizzbuzz"
   (fzzbzz 1) => '("1")
