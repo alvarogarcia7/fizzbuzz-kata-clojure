@@ -16,7 +16,4 @@
 
 (defn fizzbuzz[n]
   (let [numbers (range 1 (inc n))]
-    (cond
-      (<= n 2) (map to-num numbers)
-      (= n 3) (map apply-first-on-second (zip fizz-buzz-schedule numbers))
-      (= n 5) (flatten [(to-num 1) (to-num 2) "fizz" (to-num 4) "buzz"]))))
+    (map apply-first-on-second (zip fizz-buzz-schedule numbers))))
