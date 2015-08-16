@@ -1,4 +1,4 @@
-(ns fizzbuzz.core
+(ns fizzbuzz.core-with-fixed-schedule
   (:gen-class))
 
 (defn to-num[i]

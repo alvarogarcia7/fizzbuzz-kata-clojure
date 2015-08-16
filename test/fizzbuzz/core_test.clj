@@ -1,17 +1,17 @@
 (ns fizzbuzz.core-test
   (:use midje.sweet)
   (:require [clojure.string :as str])
-  (:require [fizzbuzz.core :refer :all]))
+  (:require [fizzbuzz.core-with-fixed-schedule :as fs]))
 
 (fact "about fizzbuzz"
-  (fizzbuzz 1) => '("1")
-  (fizzbuzz 2) => '("1" "2")
-  (fizzbuzz 3) => '("1" "2" "fizz")
-  (fizzbuzz 5) => '("1" "2" "fizz" "4" "buzz")
-  (fizzbuzz 15) => '("1" "2" "fizz" "4" "buzz" "fizz" "7" "8" "fizz" "buzz" "11" "fizz" "13" "14" "fizzbuzz")
+  (fs/fizzbuzz 1) => '("1")
+  (fs/fizzbuzz 2) => '("1" "2")
+  (fs/fizzbuzz 3) => '("1" "2" "fizz")
+  (fs/fizzbuzz 5) => '("1" "2" "fizz" "4" "buzz")
+  (fs/fizzbuzz 15) => '("1" "2" "fizz" "4" "buzz" "fizz" "7" "8" "fizz" "buzz" "11" "fizz" "13" "14" "fizzbuzz")
     )
 
 (fact "about number to string converter"
-  (to-num 1) => "1"
-  (to-num 2) => "2"
-  (to-num 3) => "3")
+  (fs/to-num 1) => "1"
+  (fs/to-num 2) => "2"
+  (fs/to-num 3) => "3")
