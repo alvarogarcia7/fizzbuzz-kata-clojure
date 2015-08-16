@@ -15,7 +15,7 @@
     "buzz"))
 
 (defn- fizz? [i]
-  (if (or (string? i) (not (= (rem i 3) 0)))
+  (if (or (string? i) (not (divisible-by? i 3)))
     i
     "fizz"))
 
